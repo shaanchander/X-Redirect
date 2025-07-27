@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "X-Redirect",
-  "version": "1.0.1",
+  "version": "1.1",
 
-  "description": "Replaces all twitter/X links with ones to xcancel.",
+  "description": "Replaces all Twitter/X links with ones to xcancel.",
 
   "icons": {
     "48": "icons/logo_48.png"
