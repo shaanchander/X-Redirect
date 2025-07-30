@@ -8,9 +8,7 @@ function replaceLinks() {
 
         try {
 
-            console.log(anchors[i].href)
             const url = new URL(anchors[i].href);
-            console.log(url.href)
             const hostname = url.hostname.replace(/^www\./, '');
             
             if (hostname === 'x.com' || hostname === 'twitter.com') {
