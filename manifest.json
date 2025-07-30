@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "X-Redirect",
-  "version": "1.1",
+  "version": "1.2",
 
   "description": "Replaces all Twitter/X links with ones to xcancel.",
 
@@ -17,9 +17,8 @@
   ],
   
   "browser_specific_settings": {
-  "gecko": {
-    "id": "x-redirect@example.com"
+    "gecko": {
+      "id": "x-redirect@shaanchander.ca"
+    }
   }
-}
-
 }

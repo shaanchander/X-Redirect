@@ -1,14 +1,26 @@
-var anchors = document.getElementsByTagName("a");
-const regex = /\b(?:https?:\/\/)?(?:www\.)?(x\.com|twitter\.com)(\/[^\s]*)?\b/;
+setInterval(replaceLinks, 1000)
 
-for (var i = 0; i < anchors.length; i++) {
-    
-    if (anchors[i].href.match(regex)) {
-        console.log('matched url (replacing):', anchors[i].href);
-        
-        // Replace the domain with 'xcancel.com' and keep the path if applicable
-        anchors[i].href = anchors[i].href.replace(regex, (match, domain, path) => {
-            return `https://xcancel.com${path || ''}`;
-        });
+function replaceLinks() {
+
+    var anchors = document.getElementsByTagName("a");
+
+    for (var i = 0; i < anchors.length; i++) {
+
+        try {
+
+            console.log(anchors[i].href)
+            const url = new URL(anchors[i].href);
+            console.log(url.href)
+            const hostname = url.hostname.replace(/^www\./, '');
+            
+            if (hostname === 'x.com' || hostname === 'twitter.com') {
+                console.log('matched url (replacing):', anchors[i].href);
+                anchors[i].href = `https://xcancel.com${url.pathname}${url.search}${url.hash}`;
+
+            }
+
+        } catch { continue; } // probably invalid link - skipping
+
     }
+
 }
