@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "X-Redirect",
+  "name": "X Redirect",
   "version": "1.2.1",
 
   "description": "Replaces all Twitter/X links with ones to xcancel.",
